@@ -4,7 +4,7 @@
 
 TARGET  = bin/web-dumper
 
-SOURCES = $(patsubst %,src/%.cpp,web-dumper application main-window)
+SOURCES = $(patsubst %,src/%.cpp,web-dumper gui/application gui/main-window)
 
 OBJS    = $(SOURCES:src/%.cpp=.objs/%.o)
 
