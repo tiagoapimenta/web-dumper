@@ -4,13 +4,13 @@
 
 TARGET  = bin/web-dumper
 
-SOURCES = $(patsubst %,src/%.cpp,web-dumper)
+SOURCES = $(patsubst %,src/%.cpp,web-dumper application main-window)
 
 OBJS    = $(SOURCES:src/%.cpp=.objs/%.o)
 
-CFLAGS  = -O3
+CFLAGS  = -O3 `pkg-config --cflags gtk+-3.0`
 LDFLAGS = 
-LIBS    = 
+LIBS    = `pkg-config --libs gtk+-3.0`
 
 all: $(TARGET)
 	strip $(TARGET)
